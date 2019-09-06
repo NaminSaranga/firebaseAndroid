@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "901032403174-3qf3aa2n3kt0t8pqvoi2ves0ok7k73ra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sliit.firebasetuteapp.firebasetuteapp",
+            "certificate_hash": "958f420d3cda44c9c1ebfe2b5758d9d51eb9d5c9"
+          }
+        },
+        {
           "client_id": "901032403174-nd435rgglc3vht0t3pgp9hnavcr37qs7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
