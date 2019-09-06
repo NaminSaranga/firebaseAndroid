@@ -140,6 +140,33 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference dltRef = FirebaseDatabase.getInstance().getReference().child("Student");
+                dltRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.hasChild("Std1")){
+                            dbRef =FirebaseDatabase.getInstance().getReference().child("Student").child("Std1");
+                            dbRef.removeValue();
+                            clearControls();
+                            Toast.makeText(getApplicationContext(),"Data Deleted Successfully",Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                            Toast.makeText(getApplicationContext(),"No Source to Delete",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        });
+
+
     }
 
 }
