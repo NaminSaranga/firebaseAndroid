@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 dbRef=FirebaseDatabase.getInstance().getReference().child("Student");
 
                 try{
-                    if(TextUtils.isEmpty(txtID.getText().toString()))
+                    if(TextUtils.isEmpty(txtName.getText().toString()))
+                        Toast.makeText(getApplicationContext(),"please enter an Name",Toast.LENGTH_SHORT).show();
+                    else if(TextUtils.isEmpty(txtID.getText().toString()))
                         Toast.makeText(getApplicationContext(),"please enter an ID",Toast.LENGTH_SHORT).show();
-                    else if(TextUtils.isEmpty(txtName.getText().toString()))
-                            Toast.makeText(getApplicationContext(),"please enter an Name",Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(txtAdd.getText().toString()))
                         Toast.makeText(getApplicationContext(),"please enter an Address",Toast.LENGTH_SHORT).show();
                     else{
